@@ -1,0 +1,27 @@
+{
+  "name": "foodapp",
+  "version": "1.0.0",
+  "description": "this is food app",
+  "scripts": {
+    "start":"parcel index.html",
+    "build":"parcel build index.html",
+    "test": "jest"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Sai krishna",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.14.4"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "browsersList":
+  [
+    "Last 2 --version"
+
+  ]
+}
