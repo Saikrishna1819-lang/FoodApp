@@ -7,11 +7,7 @@
     
 }
 
-.filter
-{
-    margin-bottom:20px;
-    
-}
+
 .filter-btn
 {
     font-size: 20px;
@@ -23,6 +19,34 @@
     border:none;
     cursor: pointer;
     
+}
+.search
+{
+    display: flex;
+    gap:10px;
+    align-items: center;
+    padding:10 20px ;
+}
+.search>button
+{
+    padding:8px;
+    background-color: orangered;
+    border: none;
+    border-radius: 8px;
+    color:white;
+    font-size: 18px;
+    font-weight: 600;
+}
+.search >input
+{
+    padding:8px;
+    border:1px solid black;
+    border-radius: 20px;
+    font-size: 18px;
+    background-color: white;
+
+
+
 }
 .filter-btn:hover
 {
@@ -41,6 +65,13 @@
 .logo
 { 
     width:80px;
+}
+.nav-items
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:20px;
 }
 .nav-items >ul
 {
@@ -70,15 +101,38 @@
     overflow: hidden;
     transition: transform 0.3s ease;
 }
+.shimmer-card
+{
+    width: 260px;
+    height:200px;
+    background-color:rgb(215, 202, 202);
+    border-radius: 16px;
+    
+}
+.login-btn
+{
+    font-size:18px;
+    background-color: orangered;
+    padding:7px;
+    border:none;
+    color:white;
+    border-radius: 8px;
+
+}
+.filter-container
+{
+    display:flex;
+    gap:50px;
+   
+    align-items: center;
+    padding:10px 20px;
+}
+
 .res-card:hover
 {
     transform: translate(-5px);
 }
-.search
-{
-    padding:10px;
 
-}
 .res-logo
 {
     width:100%;
@@ -137,6 +191,16 @@
     justify-content: center;
     padding:40px;
 }
+.shimmer-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: white;
+    justify-content: center;
+    padding: 40px;
+}
+
 .card-title{
     font-size: 18px;
     font-weight: 600;
