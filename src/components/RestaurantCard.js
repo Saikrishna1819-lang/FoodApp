@@ -7,9 +7,9 @@ const RestaurantCard=(props)=>
         const {cloudinaryImageId,name,costForTwo,avgRating,cuisines,areaName}=resData;
       
         return (
-              <div className="res-card">
+              <div className="bg-white shadow-lg rounded-lg flex flex-col w-[220]">
                  
-                 <img className="res-logo" src={CDN_URL+
+                 <img className="h-[150px] rounded-t-lg" src={CDN_URL+
               cloudinaryImageId}/>
                  <div className="card-content">
                  <div className="card-title">
@@ -21,7 +21,7 @@ const RestaurantCard=(props)=>
     
                  </div>
                  
-                    <div className="food-name">{cuisines}</div>
+                    <div className="food-name">{cuisines.join(', ')}</div>
                     <div className="address">{areaName}</div>
                  
     
@@ -29,4 +29,20 @@ const RestaurantCard=(props)=>
               </div>
         )
     }
-export default RestaurantCard;
+
+export const withPromotedLabel=(RestaurantCard)=>
+{
+   return (props)=>
+   {
+      return(
+         <div>
+            <label className="absolute bg-black text-white px-2 py-1 rounded-lg">Promoted</label>
+            <RestaurantCard {...props}/>
+
+         </div>
+      
+      )
+
+   }
+}
+export default RestaurantCard;  
