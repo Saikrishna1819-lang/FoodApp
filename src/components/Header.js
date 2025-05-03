@@ -2,10 +2,18 @@ import { LOGO_URL } from "../utils/constants";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import { useSelector } from "react-redux";
+import appStore from "../utils/appStore";
+
+
 
 const Header = () => {
   const [btnNameReact, setBtnNameReact] = useState("Login");
   const online = useOnlineStatus();
+
+  // subscribing the store using a Selector 
+  const cartItems=useSelector((store)=> store.cart.items);
+  console.log(cartItems);
 
   return (
     <header className="flex flex-wrap justify-between items-center mt-5 mx-6 md:mx-10 px-4 py-3 md:px-8 bg-white shadow-lg rounded-xl">
@@ -27,7 +35,7 @@ const Header = () => {
           <li><Link to="/" className="hover:text-blue-600 transition">Home</Link></li>
           <li><Link to="/about" className="hover:text-blue-600 transition">About Us</Link></li>
           <li><Link to="/Contacts" className="hover:text-blue-600 transition">Contact Us</Link></li>
-          <li><Link to="/Cart" className="hover:text-blue-600 transition">Cart</Link></li>
+          <li><Link to="/Cart" className="hover:text-blue-600 transition">Cart -({cartItems.length} items)</Link></li>
         </ul>
         <button
           className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition"
